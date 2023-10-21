@@ -1,0 +1,317 @@
+:root {
+    --white: white;
+    --black: #1a1a1a;
+    --grey: #2f2f2c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Lato', sans-serif;
+}
+
+/* DESKTOP MENU SECTION*/
+#desktop-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+#desktop-menu #logo a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+#desktop-menu #links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#desktop-menu #links ul li {
+    list-style-type: none;
+    padding: 0 1rem 0 1rem;
+}
+
+#desktop-menu #links ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#desktop-menu #links ul li a:hover {
+    border-bottom: var(--white) 3px solid;
+    transition: .5s ease;
+    padding-bottom: .5rem;
+}
+
+#desktop-menu #links ul li a #english-language-icon, #desktop-menu #links ul li a #romanian-language-icon {
+    width: 2vw;
+    vertical-align: middle;
+}
+
+/* HOME SECTION (INDEX) */
+#home #welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0 10rem 0;
+}
+
+#welcome #home-text {
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcome #home-text h1 {
+    color: var(--white);
+    text-align: center;
+    font-size: 3rem;
+}
+
+#welcome #home-text h2 {
+    color: var(--white);
+    text-align: center;
+    font-size: 2rem;
+}
+
+#welcome #social-links {
+    margin-top: 1rem;
+}
+
+#welcome #social-links img {
+    width: 3vw;
+    height: 3vw;
+}
+
+#home #welcome #profile-image img {
+    width: 100%;
+    height: 50vh;
+    border: 5px solid var(--white);
+    border-radius: 50%;
+}
+
+#home #scroll-box {
+    width: 40px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3rem;
+    box-shadow: inset 0 0 0 1px #fff;
+    border-radius: 25px;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#scroll-box #scroll-box-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: var(--white);
+  border-radius: 50%;
+  transition: transform 0.3s;
+  margin-top: .5rem;
+  animation: scrollIndicatorAnimation 2s linear infinite, fadeOut 2s infinite;
+}
+
+@keyframes scrollIndicatorAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(450%);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* PROJECTS SECTION*/
+#projects {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15rem 0 17rem 0;
+}
+
+#projects h1 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+#projects #projects-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#projects-list #project-container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 100%;
+    margin: 0 1rem 0 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 11.5px );
+    -webkit-backdrop-filter: blur( 11.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#project-container img {
+    width: 100%;
+    height: 100%;
+}
+
+#project-container h2 {
+    margin: 1rem 0 .5rem 0;
+}
+
+#project-container p {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#project-container a {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 1rem;
+    border: 1px solid transparent;
+}
+
+#project-container a:hover {
+    color: var(--black);
+    background-color: transparent;
+    border: 1px solid var(--black);
+    transition: .5s ease;
+}
+
+/* SKILLS SECTION */
+#skills {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 12rem 0 12rem 0;
+}
+
+#skills h1 {
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+#skills #skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#skills-list #skill-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 25vw;
+    background-color: var(--white);
+    text-align: center;
+    margin: 1rem;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+#skills-list #skill-container:hover {
+    transform: scale(1.05);
+}
+
+#skill-container img {
+    width: 15vw;
+}
+
+#skill-container h2 {
+    padding: .5rem;
+}
+
+#skill-container #web-design-title {
+    margin-top: 1rem;
+}
+
+#skill-container p {
+    padding: 1rem;
+    font-size: 1.10rem;
+}
+
+/* PROJECT PAGE SECTION */
+#project {
+    padding: 15rem 0 15rem 0;
+}
+
+/* FOOTER SECTION*/
+footer {
+    background-color: var(--black);
+    height: 100%;
+    padding: 1rem 0 1rem 0;
+}
+
+footer #footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#footer p a {
+    text-decoration: none;
+    color: var(--white);
+    margin: 0 .2rem 0 .2rem;
+}
+
+/* MEDIA QUERY (RESPONSIVE MOBILE) */
+@media (400px <= width <= 600px) {
+    body {
+        background: var(--black);
+    }
+    
+}
