@@ -308,10 +308,25 @@ footer #footer p {
     margin: 0 .2rem 0 .2rem;
 }
 
+/* OTHERS */
+#mobile-alert {
+    display: none;
+}
+
 /* MEDIA QUERY (RESPONSIVE MOBILE) */
-@media (400px <= width <= 600px) {
-    body {
-        background: var(--black);
+@media (min-width: 320px) and (max-width: 700px) {
+    #desktop-menu, #home, #projects, #skills, footer {
+        display: none;
+    }
+
+    #mobile-alert {
+        display: block;
+        padding: 20rem 0 20rem 0;
+    }
+
+    #mobile-alert h1 {
+        color: var(--white);
+        text-align: center;
     }
     
 }
