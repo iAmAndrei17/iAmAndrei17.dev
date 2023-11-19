@@ -20,3 +20,18 @@ setInterval(function() {
 setInterval(function() {
   startAnimation('animate__flash', 'andrei-dev-github');
 }, 3000);
+
+
+// MOBILE MENU
+
+$(document).ready(function() {
+
+  $("#hamburger-menu-button").click(function() {
+      $("#mobile-menu-container").width("100%").show();
+  });
+
+  $("#closeMobileMenuButton").click(function() {
+    $("#mobile-menu-container").width("0%");
+  });
+
+});

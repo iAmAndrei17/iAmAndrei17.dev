@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/images/favicon/favicon.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/672598baa6.js" crossorigin="anonymous"></script>
-    <title>Andrei Achimescu - Portofolio Website</title>
-</head>
-<body>
-    <section id="desktop-menu">
-        <div id="logo">
-            <a href="/index.html">iAmAndrei17.dev</a>
-        </div>
-        <div id="links">
-            <ul>
-                <li><a>Abilități</a></li>
-                <li><a>Proiecte</a></li>
-                <li><a href="/en/index.html"><img src="/images/en/english-icon.png" alt="English Language Icon" id="english-language-icon" loading="lazy" draggable="false"></a></li>
-            </ul>
-        </div>
-    </section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon/favicon.png" type="image/x-icon">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/672598baa6.js" crossorigin="anonymous"></script>
+        <title>Andrei Achimescu - Portofolio Website</title>
+    </head>
+    <body>
+        <section id="desktop-menu">
+            <div id="logo">
+                <a href="/index.html"><img src="/images/logo/iamandrei17-logo.png" alt="iAmAndrei17.dev Logo" id="iamandrei17.dev-logo" loading="lazy" draggable="false"></a>
+            </div>
+            <div id="links">
+                <ul>
+                    <li><a href="#skills">Abilități</a></li>
+                    <li><a href="#projects">Proiecte</a></li>
+                    <li><a href="/en/projects/eticket.html"><img src="/images/en/english-icon.png" alt="English Language Icon" id="english-language-icon" loading="lazy" draggable="false"></a></li>
+                </ul>
+            </div>
+        </section>
+    
+        <section id="mobile-menu">
+            <div id="logo">
+                <a href="/index.html"><img src="/images/logo/iamandrei17-logo.png" alt="iAmAndrei17.dev Logo" id="iamandrei17.dev-logo" loading="lazy" draggable="false"></a>
+            </div>
+            <div id="hamburger-menu">
+                <i class="fa-solid fa-bars" id="hamburger-menu-button"></i>
+            </div>
+    
+            <div id="mobile-menu-container" class="overlay">
+                <a id="closeMobileMenuButton"><i class="fa-solid fa-xmark"></i></a>
+                <div class="overlay-content">
+                  <a href="#skills">Abilități</a>
+                  <a href="#projects">Proiecte</a>
+                  <a href="/en/projects/eticket.html"><img src="/images/en/english-icon.png" alt="English Language Icon" id="english-language-icon" loading="lazy" draggable="false"></a>
+                </div>
+              </div>
+        </section>
 
-    <section id="project">
+        <section id="soon">
+            <img src="/images/working/working.png" alt="Working Soon Image" loading="lazy" draggable="false">
+            <h1>Working. Very soon...</h1>
+        </section>
 
-    </section>
+    <!--<section id="project">
+        <h1>eTicket</h1>
+        <p></p>
+
+        <div id="project-images">
+            <img src="/images/projects/eticket/" alt="" loading="lazy" draggable="false">
+        </div>
+    </section>-->
 
 </body>
 
@@ -40,5 +69,5 @@
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="script.js" type="text/javascript"></script>
+<script src="/script.js" type="text/javascript"></script>
 </html>

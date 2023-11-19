@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon/favicon.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/672598baa6.js" crossorigin="anonymous"></script>
     <title>Andrei Achimescu - Portofolio Website</title>
 </head>
 <body>
     <section id="desktop-menu">
         <div id="logo">
-            <a href="index.html">iAmAndrei17.dev</a>
+            <a href="index.html"><img src="images/logo/iamandrei17-logo.png" alt="iAmAndrei17.dev Logo" id="iamandrei17.dev-logo" loading="lazy" draggable="false"></a>
         </div>
         <div id="links">
             <ul>
@@ -25,6 +26,24 @@
                 <li><a href="en/index.html"><img src="images/en/english-icon.png" alt="English Language Icon" id="english-language-icon" loading="lazy" draggable="false"></a></li>
             </ul>
         </div>
+    </section>
+
+    <section id="mobile-menu">
+        <div id="logo">
+            <a href="index.html"><img src="images/logo/iamandrei17-logo.png" alt="iAmAndrei17.dev Logo" id="iamandrei17.dev-logo" loading="lazy" draggable="false"></a>
+        </div>
+        <div id="hamburger-menu">
+            <i class="fa-solid fa-bars" id="hamburger-menu-button"></i>
+        </div>
+
+        <div id="mobile-menu-container" class="overlay">
+            <a id="closeMobileMenuButton"><i class="fa-solid fa-xmark"></i></a>
+            <div class="overlay-content">
+              <a href="#skills">Abilități</a>
+              <a href="#projects">Proiecte</a>
+              <a href="en/index.html"><img src="images/en/english-icon.png" alt="English Language Icon" id="english-language-icon" loading="lazy" draggable="false"></a>
+            </div>
+          </div>
     </section>
 
     <section id="mobile-alert">
@@ -39,6 +58,7 @@
                 <div id="social-links">
                     <a href="https://www.linkedin.com/in/andrei-achimescu-7661b1240/" target="_blank"><img src="images/social-links/linkedin.png" alt="Linkedin Logo" loading="lazy" draggable="false"></a>
                     <a href="https://github.com/iAmAndrei17" target="_blank"><img src="images/social-links/github-white.png" alt="GitHub Logo" loading="lazy" draggable="false"></a>
+                    <a href="https://www.instagram.com/iamandrei17.dev/" target="blank"><img src="images/social-links/instagram.png" loading="lazy" draggable="false"></a>
                 </div>
             </div>
             <div id="profile-image" data-aos="fade-down" data-aos-duration="1000">
@@ -53,7 +73,7 @@
     <section id="projects" data-aos="zoom-in" data-aos-duration="1000">
         <h1 data-aos="fade-down" data-aos-duration="1000">Proiecte personale</h1>
 
-        <div id="projects-list" data-aos="fade-down" data-aos-duration="1000">
+        <div id="projects-list">
         <div id="project-container">
             <img src="images/website-images/eticket/default-eticket-image.PNG" alt="eTicket Showcase Image" loading="lazy" draggable="false">
             <h2>eTicket</h2>

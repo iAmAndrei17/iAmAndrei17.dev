@@ -2,12 +2,28 @@
     --white: white;
     --black: #1a1a1a;
     --grey: #2f2f2c;
+    --sb-track-color: #232e33;
+    --sb-thumb-color: #11998e;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* SCROLLBAR DESIGN*/
+body::-webkit-scrollbar {
+    width: 10px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: #232e33;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #38ef7d, #11998e);
+    border-radius: 10px;
 }
 
 html {
@@ -19,9 +35,15 @@ body {
     background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Lato', sans-serif;
+    cursor: url("/images/cursor/cursor.png"), auto;
 }
 
+
 /* DESKTOP MENU SECTION*/
+#mobile-menu, #myNav {
+    display: none;
+}
+
 #desktop-menu {
     display: flex;
     flex-direction: row;
@@ -29,10 +51,8 @@ body {
     padding: 2rem;
 }
 
-#desktop-menu #logo a {
-    text-decoration: none;
-    color: var(--white);
-    font-size: 1.5rem;
+#desktop-menu #logo img {
+    width: 15vw;
 }
 
 #desktop-menu #links ul {
@@ -94,6 +114,10 @@ body {
 
 #welcome #social-links {
     margin-top: 1rem;
+}
+
+#welcome #social-links a {
+    margin: 0 .5rem 0 .5rem;
 }
 
 #welcome #social-links img {
@@ -313,13 +337,44 @@ footer #footer p {
     display: none;
 }
 
+#soon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15rem;
+}
+
+#soon img {
+    width: 40vw;
+    margin-top: 5rem;
+}
+
+#soon h1 {
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 2rem;
+}
+
 /* MEDIA QUERY (RESPONSIVE MOBILE) */
 @media (min-width: 320px) and (max-width: 700px) {
-    #desktop-menu, #home, #projects, #skills, footer {
+
+    /**/
+
+    #soon {
+        padding-bottom: 25rem;
+    }
+
+    #soon img {
+        margin-top: 10rem;
+    }
+
+    #desktop-menu {
         display: none;
     }
 
-    #mobile-alert {
+    /* MOBILE TEXT (WORKING RESPONSIVE) /*
+    /*#mobile-alert {
         display: block;
         padding: 20rem 0 20rem 0;
     }
@@ -327,6 +382,142 @@ footer #footer p {
     #mobile-alert h1 {
         color: var(--white);
         text-align: center;
+    }*/
+
+    /* MOBILE MENU */
+    #mobile-menu-container {
+        display: block;
+    }
+
+    #mobile-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #mobile-menu #logo a img {
+        width: 50vw;
+        margin: 1rem 0 0 1rem;
+    }
+
+    #mobile-menu #hamburger-menu i {
+        color: var(--white);
+        width: 2.5rem;
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        cursor: pointer;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+      
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+      
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: var(--white);
+        display: block;
+        transition: 0.3s;
+    }
+      
+    .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+    }
+      
+    .overlay #closeMobileMenuButton {
+        position: absolute;
+        top: -12px;
+        right: 5px;
+        font-size: 60px;
+        cursor: pointer;
+    }
+
+    .overlay-content a img {
+        width: 10vw;
+    }
+
+    /* HOME */
+    #home #welcome {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #home #welcome #home-text {
+        margin: 0;
+    }
+
+    #welcome #home-text h1 {
+        font-size: 2.5rem;
+    }
+
+    #home #welcome #profile-image img {
+        width: 100%;
+        height: 40vh;   
+    }
+
+    #home #welcome #social-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #home #welcome #social-links a img{
+       width: 100%;
+       height: 7vh;
+    }
+
+    #home #scroll-box {
+        margin-top: -8rem;
+    }
+
+    /* PROJECTS */
+    #projects #projects-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+
+    #projects-list #project-container {
+        width: 80vw;
+        backdrop-filter: none;
+    }
+
+    /* SKILLS */
+    #skills #skills-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #skills-list #skill-container {
+        width: 80vw;
+        height: 100%;
+    }
+
+    #skill-container img {
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
     }
     
 }
